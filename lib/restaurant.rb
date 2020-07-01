@@ -17,4 +17,9 @@ class Restaurant
   def open_for_lunch?
     return true if @opening_time.to_i < 11; false
   end
+
+  def menu_dish_names
+    @dishes.map { |dish| dish.upcase }
+
+  end
 end

@@ -61,7 +61,7 @@ class RestaurantTest < Minitest::Test
   end
 
   def test_menu_dishes_are_upcase
-    skip
+    # skip
     restaurant1 = Restaurant.new('10:00', 'Fuel Cafe')
     restaurant2 = Restaurant.new('16:00', 'Il Posto')
 
