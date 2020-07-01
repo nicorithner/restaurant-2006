@@ -20,6 +20,14 @@ class Restaurant
 
   def menu_dish_names
     @dishes.map { |dish| dish.upcase }
+  end
 
+  def announce_closing_time(hours)
+    closing_time = ((@opening_time.to_i + hours).to_s + ":00") 
+    if closing_time.to_i < 12
+      return "#{@name} will be closing at #{closing_time}AM"
+    else
+      return "#{@name} will be closing at #{(closing_time.to_i - 12).to_s + ":00"}PM"
+    end
   end
 end
